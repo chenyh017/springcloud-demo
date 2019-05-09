@@ -19,7 +19,7 @@ public class AccessFilter extends ZuulFilter {
 
 	@Override
 	public boolean shouldFilter() {
-		return false;
+		return true;
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class AccessFilter extends ZuulFilter {
 		HttpServletRequest request = ctx.getRequest();
 
 		Object accessToken = request.getParameter("accessToken");
-		System.out.println(accessToken);
+		System.out.println("filter");
 		return null;
 	}
 
